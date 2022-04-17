@@ -1,18 +1,14 @@
-defmodule Challenge1 do
-  @moduledoc """
-  Documentation for `Challenge1`.
-  """
+defmodule ListLength do
+  def call(list) do
+    length(list, 0)
+  end
 
-  @doc """
-  Hello world.
+  def length([], acc) do
+    acc
+  end
 
-  ## Examples
-
-      iex> Challenge1.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def length([_head | tail], acc) do
+    a = acc + 1
+    length(tail, a)
   end
 end
